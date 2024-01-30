@@ -2,12 +2,22 @@ import { aboutData } from "@/app/constant/data";
 import CountUp from "react-countup";
 import { useState } from "react";
 
+//animation
+import fadeIn from "@/components/Variants";
+import { motion } from "framer-motion";
+
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
     <section className="padding-container max-container flex flex-col gap-8 py-8 lg:flex-row lg:py-40 lg:gap-32">
       {/* left side */}
-      <div className=" flex flex-1 flex-col flexCenter lg:justify-start">
+      <motion.div
+        variants={fadeIn("left", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className=" flex flex-1 flex-col flexCenter lg:justify-start"
+      >
         <h3 className="h3">
           FrontEnd <span className="text-secondary">Web</span> Developer.
         </h3>
@@ -55,9 +65,15 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* right side */}
-      <div className="flex flex-col w-full xl:max-w-[47%] h-[488px]">
+      <motion.div
+        variants={fadeIn("right", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="flex flex-col w-full xl:max-w-[47%] h-[488px]"
+      >
         {/* skill */}
         <div className="mb-4 lg:mb-16 flex flex-col gap-3 mx-auto min-w-[90%] xl:ml-0">
           <div className="">
@@ -115,17 +131,17 @@ const About = () => {
               <div className="hidden lg:flex">-</div>
               <div className="">{item.year}</div>
               {/* icons */}
-                <div className="flex gap-x-2">
-                  {
-                    item.icon?.map((icon, itemIndex) => (
-                      <div className="">{icon}</div>
-                    ))
-                  }
-                </div>
+              <div className="flex gap-x-2">
+                {item.icon?.map((icon, itemIndex) => (
+                  <div className="" key={itemIndex}>
+                    {icon}
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -12,16 +12,24 @@ import Link from "next/link";
 // icon
 import { FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
 
-// cloudinary image
-import { CldImage } from "next-cloudinary";
+// image from next image
+import Image from "next/image";
 
-import Work1 from "@/public/ShowCase/Buntus-food-restaurent-PSD-template.jpg";
+//animation
+import fadeIn from "@/components/Variants";
+import { motion } from "framer-motion";
 
 const Showcase = () => {
   return (
     <section className="padding-container max-container py-12 xl:py-32 flex flex-col md:flex-row  md:gap-8 lg:gap-20 xl:gap-28">
       {/* title */}
-      <div className="md:max-w-[40%]">
+      <motion.div
+        variants={fadeIn("left", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="md:max-w-[45%]"
+      >
         <div className="pb-12 text-center uppercase">
           <h3 className="text-[30px] lg:text-[36px] font-extrabold relative leading-normal uppercase">
             Work<span className="text-secondary">s</span>
@@ -35,22 +43,28 @@ const Showcase = () => {
             quae doloribus?
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* swiper */}
-      <div className="w-full sm:max-w-[95%]">
+      <motion.div
+        variants={fadeIn("right", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="w-full sm:max-w-[65%]"
+      >
         <Swiper
           breakpoints={{
             640: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 10,
             },
           }}
           pagination={{
             clickable: true,
           }}
           modules={[Pagination]}
-          className="h-[341px] sm:h-[277px] md:h-[377px] sm:mt-16"
+          className="sm:mt-16 "
         >
           {showcase.slides.map((slide, i) => (
             <SwiperSlide key={i}>
@@ -58,16 +72,21 @@ const Showcase = () => {
                 {slide.images.map((image, i) => (
                   <div className="flexCenter" key={i}>
                     <div className="relative overflow-hidden group rounded-lg cursor-pointer">
-                      <div className="min-w-full">
-                        <CldImage
+                      <div className="w-full">
+                        <Image
                           src={image.url}
                           alt="working"
                           height={150}
-                          width={250}
+                          width={350}
                         />
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-l from-[#19974e] to-[#fe0000] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      <Link href={'/'} className="absolute top-[100%] left-1/2 text-2xl -translate-x-1/2 group-hover:opacity-100 opacity-0 transition-all duration-500"><FaExternalLinkAlt/></Link>
+                      <Link
+                        href={"/"}
+                        className="absolute top-[100%] left-1/2 text-2xl -translate-x-1/2 group-hover:opacity-100 group-hover:top-[50%] opacity-0 transition-all duration-500"
+                      >
+                        <FaExternalLinkAlt />
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -75,7 +94,7 @@ const Showcase = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </section>
   );
 };

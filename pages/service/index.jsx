@@ -12,11 +12,21 @@ import Link from "next/link";
 // icon
 import { FaArrowRight } from "react-icons/fa";
 
+//animation
+import fadeIn from "@/components/Variants";
+import { motion } from "framer-motion";
+
 const service = () => {
   return (
     <section className="padding-container max-container py-12 xl:py-32 flex flex-col  md:gap-8 lg:gap-20 xl:gap-28">
       {/* title */}
-      <div className="pb-12 text-center">
+      <motion.div
+        variants={fadeIn("down", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="pb-12 text-center"
+      >
         <h3 className="text-[30px] lg:text-[36px] font-extrabold relative leading-normal uppercase">
           Service<span className="text-secondary">s</span>
           <span className="text-[45px] lg:text-[54px] font-extrabold text-white/5 absolute top-[50%] left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase">
@@ -27,10 +37,16 @@ const service = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
           ex nihil nisi explicabo! Accusantium minima delectus quae doloribus?
         </p>
-      </div>
+      </motion.div>
 
       {/* swiper */}
-      <div className="w-full sm:max-w-[95%]">
+      <motion.div
+        variants={fadeIn("up", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="w-full sm:max-w-[95%]"
+      >
         <Swiper
           breakpoints={{
             320: {
@@ -77,7 +93,7 @@ const service = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -123,38 +123,123 @@ export const ServiceData = [
 
 
 //showcase
-
 export const showcase = {
   slides: [
     {
       images: [
         {
-          url: "https://res.cloudinary.com/thesakibdev/image/upload/v1706465731/ShowCase/Whats-New_w8nf04.webp",
+          url: "/ShowCase/Whats-New.png",
         },
         {
-          url: "https://res.cloudinary.com/thesakibdev/image/upload/v1706465730/ShowCase/Web-Vcard_bz0akg.webp",
+          url: "/ShowCase/Buntus-food-restaurent-PSD-template.jpg",
         },
       ]
     },
     {
       images: [
         {
-          url: "https://res.cloudinary.com/thesakibdev/image/upload/v1706465730/ShowCase/TWC-Pricing-Section_x9qrm1.webp",
+          url: "/ShowCase/CleanSign.png",
         },
         {
-          url: "https://res.cloudinary.com/thesakibdev/image/upload/v1706465730/ShowCase/TWC-Pricing-Section_x9qrm1.webp",
+          url: "/ShowCase/Our-Trainers.png",
         },
       ]
     },
     {
       images: [
         {
-          url: "https://res.cloudinary.com/thesakibdev/image/upload/v1706465730/ShowCase/TWC-Pricing-Section_x9qrm1.webp",
+          url: "/ShowCase/Paint-Header-Style.jpeg",
         },
         {
-          url: "https://res.cloudinary.com/thesakibdev/image/upload/v1706465730/ShowCase/TWC-Pricing-Section_x9qrm1.webp",
+          url: "/ShowCase/PlumbMan.jpg",
         },
-      ]
+      ],
+    },
+    {
+      images: [
+        {
+          url: "/ShowCase/Portfolio.jpg",
+        },
+        {
+          url: "/ShowCase/Sellcrowd-—-Landing-Page.png",
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          url: "/ShowCase/sybite-cover.png",
+        },
+        {
+          url: "/ShowCase/The-Diary-Multipurpose-Blog-Concept.png",
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          url: "/ShowCase/TWC-Features-Section.png",
+        },
+        {
+          url: "/ShowCase/TWC-Pricing-Section.png",
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          url: "/ShowCase/View-I-AM-—-Youtuber-Portfolio.png",
+        },
+        {
+          url: "/ShowCase/Web-Vcard.jpg",
+        },
+      ],
     },
   ],
 };
+
+//testimonialData
+export const testimonialData = [
+  {
+    url: "/user-info/banner.png",
+    name: 'John Deo',
+    position: "Customer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+  },
+  {
+    url: "/user-info/banner.png",
+    name: 'John Deo',
+    position: "Customer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+  },
+  {
+    url: "/user-info/banner.png",
+    name: 'John Deo',
+    position: "Customer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+  },
+  {
+    url: "/user-info/banner.png",
+    name: 'John Deo',
+    position: "Customer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+  },
+  {
+    url: "/user-info/banner.png",
+    name: 'John Deo',
+    position: "Customer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+  },
+  {
+    url: "/user-info/banner.png",
+    name: 'John Deo',
+    position: "Customer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+  },
+  {
+    url: "/user-info/banner.png",
+    name: 'John Deo',
+    position: "Customer",
+    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+  },
+];

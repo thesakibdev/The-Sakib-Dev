@@ -13,6 +13,9 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   background-color: #f13024;
+  top: 262px;
+  margin-top: 20px;
+  padding-top: 5px;
 }
 
 .swiper-button-next:after,
@@ -23,7 +26,7 @@
 }
 @layer base {
   body {
-    @apply bg-primary text-white leading-relaxed relative overflow-hidden;
+    @apply bg-primary text-white leading-relaxed relative ;
   }
   .page {
     @apply w-full h-screen overflow-hidden;
