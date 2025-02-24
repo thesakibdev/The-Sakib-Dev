@@ -27,7 +27,7 @@ const Home = () => {
           A
           <span className="pl-2">
             <Typewriter
-              words={["FrontEnd Developer", "Passionate Programer"]}
+              words={["Mern Stack Developer", "Passionate Programer"]}
               loop={true}
               cursor
               cursorStyle={"_"}
@@ -73,7 +73,7 @@ const Home = () => {
               "#b835e5",
               "#eaeaea",
             ],
-            transition: { duration: 10, repeat: Infinity, ease: "easeInOut" },
+            transition: { duration: 20, repeat: Infinity, ease: "easeInOut" },
           }}
         ></motion.span>
       </motion.div>
