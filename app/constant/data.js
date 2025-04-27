@@ -1,35 +1,35 @@
-// images 
-import Work1 from '@/public/ShowCase/Buntus-food-restaurent-PSD-template.jpg'
+// images
+const Work1 = require("@/public/ShowCase/Buntus-food-restaurent-PSD-template.jpg");
 // icons
-import {
+const {
   HiHome,
   HiUser,
   HiSquare2Stack,
   HiRectangleGroup,
   HiChatBubbleBottomCenterText,
   HiEnvelope,
-} from "react-icons/hi2";
-
-import { RxDesktop } from "react-icons/rx";
-import { BiBug } from "react-icons/bi";
-import {
+} = require("react-icons/hi2");
+const { RxDesktop } = require("react-icons/rx");
+const { BiBug } = require("react-icons/bi");
+const {
   FaHtml5,
   FaCss3,
   FaJs,
   FaReact,
   FaFigma,
   FaNodeJs,
-} from "react-icons/fa";
-import {
+} = require("react-icons/fa");
+
+const {
   SiNextdotjs,
   SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
-} from "react-icons/si";
+} = require("react-icons/si");
 
 // nav data
 
-export const navData = [
+ const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
   { name: "service", path: "/service", icon: <HiRectangleGroup /> },
@@ -43,7 +43,7 @@ export const navData = [
 ];
 
 //about
-export const aboutData = [
+ const aboutData = [
   {
     title: "expertise",
     info: [
@@ -93,37 +93,36 @@ export const aboutData = [
 ];
 
 // service
-export const ServiceData = [
+ const ServiceData = [
   {
-    icon: <FaFigma/>,
-    title: 'UI/UX Design',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium'
+    icon: <FaFigma />,
+    title: "UI/UX Design",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
   },
   {
-    icon: <RxDesktop/>,
-    title: 'Web Development',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium'
+    icon: <RxDesktop />,
+    title: "Web Development",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
   },
   {
-    icon: <FaReact/>,
-    title: 'App Development',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium'
+    icon: <FaReact />,
+    title: "App Development",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
   },
   {
-    icon: <BiBug/>,
-    title: 'Bug Fixing',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium'
+    icon: <BiBug />,
+    title: "Bug Fixing",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
   },
   {
-    icon: <FaNodeJs/>,
-    title: 'BackEnd Development',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium'
+    icon: <FaNodeJs />,
+    title: "BackEnd Development",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
   },
 ];
 
-
 //showcase
-export const showcase = {
+ const showcase = {
   slides: [
     {
       images: [
@@ -133,7 +132,7 @@ export const showcase = {
         {
           url: "/ShowCase/Buntus-food-restaurent-PSD-template.jpg",
         },
-      ]
+      ],
     },
     {
       images: [
@@ -143,7 +142,7 @@ export const showcase = {
         {
           url: "/ShowCase/Our-Trainers.png",
         },
-      ]
+      ],
     },
     {
       images: [
@@ -199,47 +198,62 @@ export const showcase = {
 };
 
 //testimonialData
-export const testimonialData = [
+ const testimonialData = [
   {
     url: "/user-info/banner.png",
-    name: 'John Deo',
+    name: "John Deo",
     position: "Customer",
-    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
   },
   {
     url: "/user-info/banner.png",
-    name: 'John Deo',
+    name: "John Deo",
     position: "Customer",
-    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
   },
   {
     url: "/user-info/banner.png",
-    name: 'John Deo',
+    name: "John Deo",
     position: "Customer",
-    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
   },
   {
     url: "/user-info/banner.png",
-    name: 'John Deo',
+    name: "John Deo",
     position: "Customer",
-    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
   },
   {
     url: "/user-info/banner.png",
-    name: 'John Deo',
+    name: "John Deo",
     position: "Customer",
-    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
   },
   {
     url: "/user-info/banner.png",
-    name: 'John Deo',
+    name: "John Deo",
     position: "Customer",
-    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
   },
   {
     url: "/user-info/banner.png",
-    name: 'John Deo',
+    name: "John Deo",
     position: "Customer",
-    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?"
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
   },
 ];
+
+module.exports = {
+  navData,
+  aboutData,
+  ServiceData,
+  showcase,
+  testimonialData,
+};
