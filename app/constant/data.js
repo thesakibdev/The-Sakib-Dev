@@ -1,5 +1,3 @@
-// images
-const Work1 = require("@/public/ShowCase/Buntus-food-restaurent-PSD-template.jpg");
 // icons
 const {
   HiHome,
@@ -20,16 +18,11 @@ const {
   FaNodeJs,
 } = require("react-icons/fa");
 
-const {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} = require("react-icons/si");
+const { SiNextdotjs, SiFramer } = require("react-icons/si");
 
 // nav data
 
- const navData = [
+const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
   { name: "service", path: "/service", icon: <HiRectangleGroup /> },
@@ -43,7 +36,7 @@ const {
 ];
 
 //about
- const aboutData = [
+const aboutData = [
   {
     title: "expertise",
     info: [
@@ -93,7 +86,7 @@ const {
 ];
 
 // service
- const ServiceData = [
+const ServiceData = [
   {
     icon: <FaFigma />,
     title: "UI/UX Design",
@@ -122,83 +115,93 @@ const {
 ];
 
 //showcase
- const showcase = {
+const showcase = {
   slides: [
     {
       images: [
         {
-          url: "/ShowCase/Whats-New.png",
+          url: "/ShowCase/Chemistrywala.png",
+          link: "https://chemistrywalah.com",
         },
         {
-          url: "/ShowCase/Buntus-food-restaurent-PSD-template.jpg",
+          url: "/ShowCase/Theislamics.png",
+          link: "https://theislamics.com",
         },
       ],
     },
     {
       images: [
         {
-          url: "/ShowCase/CleanSign.png",
+          url: "/ShowCase/Jon_Carter_Portfolio.png",
+          link: "https://thesakibdev.github.io/Jon-carter",
         },
         {
-          url: "/ShowCase/Our-Trainers.png",
+          url: "/ShowCase/My_Folio.png",
+          link: "https://thesakibdev.github.io/MY-FOLIO",
         },
       ],
     },
     {
       images: [
         {
-          url: "/ShowCase/Paint-Header-Style.jpeg",
+          url: "/ShowCase/CofeStar.png",
+          link: "https://coffee-star.vercel.app",
         },
         {
-          url: "/ShowCase/PlumbMan.jpg",
+          url: "/ShowCase/Coral.png",
+          link: "https://coral-ecommerce-dun.vercel.app",
         },
       ],
     },
     {
       images: [
         {
-          url: "/ShowCase/Portfolio.jpg",
+          url: "/ShowCase/Social_Links.png",
+          link: "https://thesakibdev.github.io/Social-links-profile",
         },
         {
-          url: "/ShowCase/Sellcrowd-—-Landing-Page.png",
+          url: "/ShowCase/Recipe_Page.png",
+          link: "https://thesakibdev.github.io/Recipe-page",
         },
       ],
     },
     {
       images: [
         {
-          url: "/ShowCase/sybite-cover.png",
+          url: "/ShowCase/Random_Image_Render.png",
+          link: "https://image-gallery-two-omega-47.vercel.app",
         },
-        {
-          url: "/ShowCase/The-Diary-Multipurpose-Blog-Concept.png",
-        },
+        // {
+        //   url: "/ShowCase/The-Diary-Multipurpose-Blog-Concept.png",
+        //   link: "https://image-gallery-two-omega-47.vercel.app"
+        // },
       ],
     },
-    {
-      images: [
-        {
-          url: "/ShowCase/TWC-Features-Section.png",
-        },
-        {
-          url: "/ShowCase/TWC-Pricing-Section.png",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          url: "/ShowCase/View-I-AM-—-Youtuber-Portfolio.png",
-        },
-        {
-          url: "/ShowCase/Web-Vcard.jpg",
-        },
-      ],
-    },
+    // {
+    //   images: [
+    //     {
+    //       url: "/ShowCase/TWC-Features-Section.png",
+    //     },
+    //     {
+    //       url: "/ShowCase/TWC-Pricing-Section.png",
+    //     },
+    //   ],
+    // },
+    // {
+    //   images: [
+    //     {
+    //       url: "/ShowCase/View-I-AM-—-Youtuber-Portfolio.png",
+    //     },
+    //     {
+    //       url: "/ShowCase/Web-Vcard.jpg",
+    //     },
+    //   ],
+    // },
   ],
 };
 
 //testimonialData
- const testimonialData = [
+const testimonialData = [
   {
     url: "/user-info/banner.png",
     name: "John Deo",
