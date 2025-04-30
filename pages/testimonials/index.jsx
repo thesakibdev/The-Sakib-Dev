@@ -33,8 +33,7 @@ const Testimonials = () => {
           </h3>
         </div>
         <p className="text-left max-w-md mx-auto text-gray-20 mb-16 ">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-          ex nihil nisi explicabo! Accusantium minima delectus quae doloribus?
+          {`Testimonial Page Description Hear from my happy clients and collaborators! I pride myself on delivering high-quality work, maintaining strong communication, and always going the extra mile to meet project needs. Your success is my success.`}
         </p>
       </motion.div>
 
