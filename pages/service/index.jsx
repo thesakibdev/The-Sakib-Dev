@@ -34,8 +34,8 @@ const service = () => {
           </span>
         </h3>
         <p className="text-center max-w-md mx-auto text-gray-20 mt-12">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-          ex nihil nisi explicabo! Accusantium minima delectus quae doloribus?
+          {`Delivering modern, scalable, and efficient web solutions using the latest technologies.
+        From backend APIs to frontend experiences, I provide end-to-end development that drives business growth.`}
         </p>
       </motion.div>
 
