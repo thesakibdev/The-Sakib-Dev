@@ -10,7 +10,7 @@ import { showcase } from "@/app/constant/data";
 // link
 import Link from "next/link";
 // icon
-import { FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 // image from next image
 import Image from "next/image";
@@ -66,10 +66,10 @@ const Showcase = () => {
           modules={[Pagination]}
           className="sm:mt-16 "
         >
-          {showcase.slides.map((slide, i) => (
+          {showcase?.slides?.map((slide, i) => (
             <SwiperSlide key={i}>
               <div className="flex flex-col items-center gap-y-4">
-                {slide.images.map((image, i) => (
+                {slide?.images?.map((image, i) => (
                   <div className="flexCenter" key={i}>
                     <div className="relative overflow-hidden group rounded-lg cursor-pointer">
                       <div className="w-full">
@@ -82,7 +82,8 @@ const Showcase = () => {
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-l from-[#19974e] to-[#fe0000] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       <Link
-                        href={"/"}
+                        href={image.link || "/"}
+                        target="_blank"
                         className="absolute top-[100%] left-1/2 text-2xl -translate-x-1/2 group-hover:opacity-100 group-hover:top-[50%] opacity-0 transition-all duration-500"
                       >
                         <FaExternalLinkAlt />
