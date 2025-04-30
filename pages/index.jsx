@@ -38,8 +38,9 @@ const Home = () => {
           </span>
         </h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut numquam
-          sit nisi consectetur eius. Incidunt sit laborum fuga.
+          {`I'm a passionate MERN Stack Web Developer. I specialize in building
+          high-performance web apps, Next.js applications, and complete Full
+          Stack solutions`}
         </p>
 
         {/* social icons */}
