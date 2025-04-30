@@ -22,8 +22,7 @@ const About = () => {
           FrontEnd <span className="text-secondary">Web</span> Developer.
         </h3>
         <p className="hidden sm:block text-center lg:text-start">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime unde
-          inventore id odio rerum aperiam placeat rem facere!
+          {`I'm Sakib, a dedicated Full Stack Web Developer with a focus on the MERN stack (MongoDB, Express.js, React.js, Node.js). I enjoy transforming ideas into real-world web applications that are fast, scalable, and user-friendly. With expertise in modern technologies like Next.js, I help businesses and individuals achieve their digital goals.`}
         </p>
 
         {/* counter */}
