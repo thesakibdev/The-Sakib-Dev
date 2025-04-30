@@ -38,9 +38,9 @@ const Showcase = () => {
             </span>
           </h3>
           <p className="text-center max-w-md mx-auto text-gray-20 mt-12">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Praesentium ex nihil nisi explicabo! Accusantium minima delectus
-            quae doloribus?
+            A glimpse of my recent projects — from innovative startups to
+            dynamic web platforms. Explore the work that reflects my passion for
+            coding, design, and functionality.
           </p>
         </div>
       </motion.div>
