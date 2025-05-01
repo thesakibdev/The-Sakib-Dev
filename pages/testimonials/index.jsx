@@ -13,7 +13,27 @@ import fadeIn from "@/components/Variants";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
 const Testimonials = () => {
+  const [bg, setBg] = useState("");
+
+  const colorList = [
+    "#149ddd",
+    "#dc143c",
+    "#EAEAEA",
+    "#F3C623",
+    "#8ACCD5",
+    "#C95792",
+    "#3D365C",
+  ];
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * colorList.length);
+    const colorCode = colorList[randomIndex];
+    setBg(colorCode);
+  }, [colorList.length]);
+
   return (
     <section className="padding-container max-container py-12 xl:py-32 flex flex-col md:flex-row  md:gap-8 lg:gap-28 md:py-32 xl:gap-40">
       {/* title */}
@@ -58,30 +78,62 @@ const Testimonials = () => {
           modules={[Pagination]}
           className="h-[288px] sm:h-[300px] lg:h-[333px]"
         >
-          {testimonialData.map((testimonial, i) => (
-            <SwiperSlide key={i}>
-              <div className="relative bg-tertiary p-4 rounded-lg flexCenter flex-col group">
-                {/* user info */}
-                <div className="flex gap-4">
-                  <Image
-                    src={testimonial.url}
-                    width={77}
-                    height={77}
-                    alt="testimonialIMG"
-                    className="rounded-full"
-                  />
+          {testimonialData.map((testimonial, i) => {
+            const avatar = testimonial.name
+              .split(" ")
+              .slice(0, 2)
+              .map((word) => word[0])
+              .join("")
+              .toUpperCase();
+            return (
+              <SwiperSlide key={i}>
+                <div className="relative bg-tertiary p-4 rounded-lg flexCenter flex-col group">
+                  {/* user info */}
+                  {testimonial.url ? (
+                    <div className="flex gap-4">
+                      <Image
+                        src={testimonial.url}
+                        width={77}
+                        height={77}
+                        alt="testimonialIMG"
+                        className="rounded-full"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      style={{ backgroundColor: bg }}
+                      className="w-[77px] h-[77px] rounded-full overflow-hidden text-white flex items-center justify-center"
+                    >
+                      <h1 className="text-xl font-bold font-mono">{avatar}</h1>
+                    </div>
+                  )}
+                  <div className="text-center">
+                    <div className="medium-20 capitalize">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-gray-50 ">{testimonial.position}</div>
+                  </div>
+                  <hr className="border-none bg-gray-50 h-[1px] w-[80%] my-4 mx-auto text-center" />
+
+                  {testimonial.screenshotUrl ? (
+                    <div className="screenshot w-full">
+                      <Image
+                        src={testimonial.screenshotUrl}
+                        alt="thesakibdev"
+                        width={100}
+                        height={100}
+                        className="w-full rounded-md"
+                      />
+                    </div>
+                  ) : (
+                    <p className="text-gray-20 text-center italic">
+                      {testimonial.message}
+                    </p>
+                  )}
                 </div>
-                <div>
-                  <div className="medium-20">{testimonial.name}</div>
-                  <div className="text-gray-50">{testimonial.position}</div>
-                </div>
-                <hr className="border-none bg-gray-50 h-[1px] w-[80%] my-4 mx-auto text-center" />
-                <p className="text-gray-20 text-center italic">
-                  {testimonial.message}
-                </p>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </motion.div>
     </section>
