@@ -76,7 +76,7 @@ const Testimonials = () => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="h-[288px] sm:h-[300px] lg:h-[333px]"
+          className="h-[300px] sm:h-[320px] md:h-[350px] lg:h-[400px]"
         >
           {testimonialData.map((testimonial, i) => {
             const avatar = testimonial.name
@@ -87,7 +87,7 @@ const Testimonials = () => {
               .toUpperCase();
             return (
               <SwiperSlide key={i}>
-                <div className="relative bg-tertiary p-4 rounded-lg flexCenter flex-col group">
+                <div className="relative bg-tertiary p-4 rounded-lg flexCenter flex-col group max-h-[350px]">
                   {/* user info */}
                   {testimonial.url ? (
                     <div className="flex gap-4">
@@ -116,13 +116,13 @@ const Testimonials = () => {
                   <hr className="border-none bg-gray-50 h-[1px] w-[80%] my-4 mx-auto text-center" />
 
                   {testimonial.screenshotUrl ? (
-                    <div className="screenshot w-full">
+                    <div className="screenshot w-full h-[150px]">
                       <Image
                         src={testimonial.screenshotUrl}
                         alt="thesakibdev"
                         width={100}
                         height={100}
-                        className="w-full rounded-md"
+                        className="w-full h-full rounded-md"
                       />
                     </div>
                   ) : (
