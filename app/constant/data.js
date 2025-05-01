@@ -120,11 +120,11 @@ const showcase = {
     {
       images: [
         {
-          url: "/ShowCase/Chemistrywala.png",
+          url: "/ShowCase/Chemistrywala.webp",
           link: "https://chemistrywalah.com",
         },
         {
-          url: "/ShowCase/Theislamics.png",
+          url: "/ShowCase/Theislamics.webp",
           link: "https://theislamics.com",
         },
       ],
@@ -132,11 +132,11 @@ const showcase = {
     {
       images: [
         {
-          url: "/ShowCase/Jon_Carter_Portfolio.png",
+          url: "/ShowCase/Jon_Carter_Portfolio.webp",
           link: "https://thesakibdev.github.io/Jon-carter",
         },
         {
-          url: "/ShowCase/My_Folio.png",
+          url: "/ShowCase/My_Folio.webp",
           link: "https://thesakibdev.github.io/MY-FOLIO",
         },
       ],
@@ -144,11 +144,11 @@ const showcase = {
     {
       images: [
         {
-          url: "/ShowCase/CofeStar.png",
+          url: "/ShowCase/CofeStar.webp",
           link: "https://coffee-star.vercel.app",
         },
         {
-          url: "/ShowCase/Coral.png",
+          url: "/ShowCase/Coral.webp",
           link: "https://coral-ecommerce-dun.vercel.app",
         },
       ],
@@ -156,11 +156,11 @@ const showcase = {
     {
       images: [
         {
-          url: "/ShowCase/Social_Links.png",
+          url: "/ShowCase/Social_Links.webp",
           link: "https://thesakibdev.github.io/Social-links-profile",
         },
         {
-          url: "/ShowCase/Recipe_Page.png",
+          url: "/ShowCase/Recipe_Page.webp",
           link: "https://thesakibdev.github.io/Recipe-page",
         },
       ],
@@ -168,7 +168,7 @@ const showcase = {
     {
       images: [
         {
-          url: "/ShowCase/Random_Image_Render.png",
+          url: "/ShowCase/Random_Image_Render.webp",
           link: "https://image-gallery-two-omega-47.vercel.app",
         },
         // {
