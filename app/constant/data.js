@@ -99,7 +99,7 @@ const ServiceData = [
   },
   {
     icon: <RxDesktop />,
-    title: "Web Development",
+    title: "Full Stack Development",
     desc: "Professional website design and development tailored to your business goals.",
   },
   {
