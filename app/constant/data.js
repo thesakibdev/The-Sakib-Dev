@@ -25,8 +25,8 @@ const { SiNextdotjs, SiFramer } = require("react-icons/si");
 const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "service", path: "/service", icon: <HiRectangleGroup /> },
-  { name: "showcase", path: "/showcase", icon: <HiSquare2Stack /> },
+  { name: "service", path: "/service", icon: <HiSquare2Stack /> },
+  { name: "showcase", path: "/showcase", icon: <HiRectangleGroup /> },
   {
     name: "testimonials",
     path: "/testimonials",
