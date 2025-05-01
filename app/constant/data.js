@@ -88,11 +88,6 @@ const aboutData = [
 // service
 const ServiceData = [
   {
-    icon: <RxDesktop />,
-    title: "Web Development",
-    desc: "Professional website design and development tailored to your business goals.",
-  },
-  {
     icon: <FaReact />,
     title: "Mern Stack Development",
     desc: "Full-stack MERN development with React, Node.js, Express, and MongoDB solutions.",
@@ -101,6 +96,11 @@ const ServiceData = [
     icon: <BiBug />,
     title: "Bug Fixing",
     desc: "Fast and efficient bug fixing services to optimize your web applications.",
+  },
+  {
+    icon: <RxDesktop />,
+    title: "Web Development",
+    desc: "Professional website design and development tailored to your business goals.",
   },
   {
     icon: <FaNodeJs />,
