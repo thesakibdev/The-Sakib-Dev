@@ -88,18 +88,13 @@ const aboutData = [
 // service
 const ServiceData = [
   {
-    icon: <FaFigma />,
-    title: "UI/UX Design",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
-  },
-  {
     icon: <RxDesktop />,
     title: "Web Development",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
   },
   {
     icon: <FaReact />,
-    title: "App Development",
+    title: "Mern Stack Development",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
   },
   {
@@ -110,6 +105,11 @@ const ServiceData = [
   {
     icon: <FaNodeJs />,
     title: "BackEnd Development",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
+  },
+  {
+    icon: <FaFigma />,
+    title: "Figma To HTML/React Conversion",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
   },
 ];
