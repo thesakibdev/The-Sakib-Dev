@@ -13,31 +13,17 @@ import fadeIn from "@/components/Variants";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { generateRandomColors } from "@/utils";
 
 const Testimonials = () => {
-  const colorList = [
-    "#ec4899", // pink-500
-    "#3b82f6", // blue-500
-    "#22c55e", // green-500
-    "#a855f7", // purple-500
-    "#eab308", // yellow-500
-    "#ef4444", // red-500
-  ];
-
   const [bgColors, setBgColors] = useState([]);
 
   useEffect(() => {
-    if (testimonialData && colorList) {
-      const colors = testimonialData.map(() => {
-        const randomIndex = Math.floor(Math.random() * colorList.length);
-        return colorList[randomIndex];
-      });
-      setBgColors(colors);
-    } else {
-      console.error("testimonialData অথবা colorList অনুপস্থিত।");
+    if (testimonialData) {
+      setBgColors(generateRandomColors(testimonialData.length));
     }
-  }, [colorList.length]);
+  }, []);
 
   return (
     <section className="padding-container max-container py-12 xl:py-32 flex flex-col md:flex-row  md:gap-8 lg:gap-28 md:py-32 xl:gap-40">
