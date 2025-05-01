@@ -51,19 +51,19 @@ const service = () => {
           breakpoints={{
             320: {
               slidesPerView: 1,
-              spaceBetween: 30,
+              spaceBetween: 25,
             },
             640: {
               slidesPerView: 2,
-              spaceBetween: 30,
+              spaceBetween: 25,
             },
             880: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 25,
             },
             1100: {
               slidesPerView: 4,
-              spaceBetween: 30,
+              spaceBetween: 25,
             },
           }}
           freeMode={true}
@@ -75,13 +75,13 @@ const service = () => {
         >
           {ServiceData.map((item, i) => (
             <SwiperSlide key={i}>
-              <div className="bg-tertiary px-8 py-12 rounded-lg h-max flex flex-col gap-4 relative hover:bg-secondary w-[70%] sm:w-full mx-auto group">
+              <div className="bg-tertiary px-8 py-12 rounded-lg h-max flex flex-col gap-4 relative hover:bg-secondary w-[70%] sm:w-full max-h-[183px] mx-auto group">
                 {/* icon */}
                 <div className="place-self-end text-secondary text-5xl group-hover:text-white">
                   {item.icon}
                 </div>
                 {/* title */}
-                <h3 className="bold-16 uppercase max-w-[2rem]">{item.title}</h3>
+                <h3 className="bold-14 uppercase max-w-[80%]">{item.title}</h3>
                 {/* link */}
                 <Link
                   href={"/"}
