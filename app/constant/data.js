@@ -90,27 +90,27 @@ const ServiceData = [
   {
     icon: <RxDesktop />,
     title: "Web Development",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
+    desc: "Professional website design and development tailored to your business goals.",
   },
   {
     icon: <FaReact />,
     title: "Mern Stack Development",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
+    desc: "Full-stack MERN development with React, Node.js, Express, and MongoDB solutions.",
   },
   {
     icon: <BiBug />,
     title: "Bug Fixing",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
+    desc: "Fast and efficient bug fixing services to optimize your web applications.",
   },
   {
     icon: <FaNodeJs />,
     title: "BackEnd Development",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
+    desc: "Robust backend development with Node.js for scalable and secure applications.",
   },
   {
     icon: <FaFigma />,
     title: "Figma To HTML/React Conversion",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium",
+    desc: "Pixel-perfect conversion from Figma designs to responsive HTML or React apps.",
   },
 ];
 
