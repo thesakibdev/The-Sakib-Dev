@@ -203,53 +203,75 @@ const showcase = {
 //testimonialData
 const testimonialData = [
   {
-    url: "/user-info/banner.png",
-    name: "John Deo",
+    url: "/Testimonials/customer_1.jpg",
+    name: "seozach",
     position: "Customer",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
+    screenshotUrl: "/Testimonials/feedback_7.webp",
   },
   {
-    url: "/user-info/banner.png",
-    name: "John Deo",
+    url: "/Testimonials/customer_9.jpg",
+    name: "evelyn",
     position: "Customer",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
+    screenshotUrl: "/Testimonials/feedback_9.webp",
   },
   {
-    url: "/user-info/banner.png",
-    name: "John Deo",
+    url: "",
+    name: "georgla_IIam",
     position: "Customer",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
+    screenshotUrl: "/Testimonials/feedback_1.webp",
   },
   {
-    url: "/user-info/banner.png",
-    name: "John Deo",
+    url: "",
+    name: "mark_danle",
     position: "Customer",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
+    screenshotUrl: "/Testimonials/feedback_2.webp",
   },
   {
-    url: "/user-info/banner.png",
-    name: "John Deo",
+    url: "",
+    name: "san_d_paul",
     position: "Customer",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
+    screenshotUrl: "/Testimonials/feedback_3.webp",
   },
   {
-    url: "/user-info/banner.png",
-    name: "John Deo",
+    url: "",
+    name: "arthur_m_dawe",
     position: "Customer",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
+    screenshotUrl: "/Testimonials/feedback_4.webp",
   },
   {
-    url: "/user-info/banner.png",
-    name: "John Deo",
+    url: "",
+    name: "jerry_g_poteet",
     position: "Customer",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
+    screenshotUrl: "/Testimonials/feedback_5.webp",
+  },
+  {
+    url: "",
+    name: "cristianraynov",
+    position: "Customer",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nobis?",
+    screenshotUrl: "/Testimonials/feedback_6.webp",
+  },
+  {
+    url: "",
+    name: "Puya Turkiyan",
+    position: "Customer",
+    message: `Sakib has literally helped me solve all my problems in less time than some of the most advanced coders I’ve worked with. He has helped me with speeding up my website, setting up new features, customizing the front-end, coding custom design.`,
+    screenshotUrl: "",
   },
 ];
 
