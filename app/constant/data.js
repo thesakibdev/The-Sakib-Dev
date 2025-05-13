@@ -16,9 +16,25 @@ const {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaBootstrap,
 } = require("react-icons/fa");
 
-const { SiNextdotjs, SiFramer } = require("react-icons/si");
+const {
+  SiNextdotjs,
+  SiFramer,
+  SiMongodb,
+  SiExpress,
+  SiPrisma,
+  SiMysql,
+  SiPostgresql,
+  SiSqlite,
+  SiTypescript,
+  SiTailwindcss,
+  SiShadcnui,
+  SiRedux,
+} = require("react-icons/si");
+import { IoLogoFirebase } from "react-icons/io5";
+import { TbBrandReactNative } from "react-icons/tb";
 
 // nav data
 
@@ -38,17 +54,51 @@ const navData = [
 //about
 const aboutData = [
   {
-    title: "expertise",
+    title: "Languages",
     info: [
       {
-        title: "Web Development",
+        title: "Frontend",
+        icon: [<FaHtml5 />, <FaCss3 />, <FaJs />, <SiTypescript />],
+      },
+      {
+        title: "Backend",
         icon: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
+          <FaNodeJs />,
+          <IoLogoFirebase />,
+          <SiMongodb />,
+          <SiMysql />,
+          <SiPostgresql />,
+          <SiSqlite />,
+          <SiPrisma />,
+        ],
+      },
+    ],
+  },
+  {
+    title: "Technologies",
+    info: [
+      {
+        title: "Ui Related",
+        icon: [<SiTailwindcss />, <FaBootstrap />, <SiShadcnui />],
+      },
+      {
+        title: "Backend Related",
+        icon: [
+          <SiExpress />,
+          <SiPrisma />,
+          <SiMongodb />,
+          <SiMysql />,
+          <SiPostgresql />,
+          <SiSqlite />,
+        ],
+      },
+      {
+        title: "Front-End Related",
+        icon: [
           <FaReact />,
           <SiNextdotjs />,
-          <SiFramer />,
+          <TbBrandReactNative />,
+          <SiRedux />,
         ],
       },
     ],
@@ -56,6 +106,18 @@ const aboutData = [
   {
     title: "experience",
     info: [
+      {
+        title: "Chief Technology Officer - The Islamics Center",
+        year: "2025",
+      },
+      {
+        title: "Full Stack Developer ( Intern ) - Luminox Labs AI",
+        year: "2025",
+      },
+      {
+        title: "Mern Stack Developer - Chemistrywala",
+        year: "2025",
+      },
       {
         title: "FrontEnd Web Developer - Creative It Institute",
         year: "2023 - 2024",
@@ -69,6 +131,14 @@ const aboutData = [
   {
     title: "education",
     info: [
+      {
+        title: "Web Dev Cohort - Chaicode ( By Hitesh Chowdury )",
+        year: "2024",
+      },
+      {
+        title: "Mern Stack Developer - Creative It Institute",
+        year: "2024",
+      },
       {
         title: "FrontEnd Web Developer - Creative It Institute",
         year: "2023",
