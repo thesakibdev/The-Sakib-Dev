@@ -93,10 +93,21 @@ const About = () => {
               <span className="absolute top-0 left-0 h-full w-[90%] bg-[#f08a5d] rounded-full animate-pulse"></span>
             </div>
           </div>
+
           <div className="">
             <div className="flexBetween text-sm text-gray-20">
               <span>Next Js</span>
               <span>85%</span>
+            </div>
+            <div className="relative bg-tertiary h-3 w-full rounded-full">
+              <span className="absolute top-0 left-0 h-full w-[85%] bg-[#b83b5e] rounded-full animate-pulse"></span>
+            </div>
+          </div>
+
+          <div className="">
+            <div className="flexBetween text-sm text-gray-20">
+              <span>Express Js</span>
+              <span>90%</span>
             </div>
             <div className="relative bg-tertiary h-3 w-full rounded-full">
               <span className="absolute top-0 left-0 h-full w-[85%] bg-[#b83b5e] rounded-full animate-pulse"></span>
