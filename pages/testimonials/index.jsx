@@ -5,9 +5,6 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-// data
-import { testimonialData } from "@/app/constant/data";
-
 //animation
 import fadeIn from "@/components/Variants";
 import { motion } from "framer-motion";
@@ -15,15 +12,30 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { generateRandomColors } from "@/utils";
+import { testimonialsAPI } from "../../utils/api";
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState([]);
   const [bgColors, setBgColors] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (testimonialData) {
-      setBgColors(generateRandomColors(testimonialData.length));
-    }
+    fetchTestimonials();
   }, []);
+
+  const fetchTestimonials = async () => {
+    try {
+      const data = await testimonialsAPI.getFeatured();
+      if (data.success) {
+        setTestimonials(data.data);
+        setBgColors(generateRandomColors(data.data.length));
+      }
+    } catch (error) {
+      console.error('Error fetching testimonials:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="padding-container max-container py-12 xl:py-32 flex flex-col md:flex-row  md:gap-8 lg:gap-28 md:py-32 xl:gap-40">
@@ -69,7 +81,14 @@ const Testimonials = () => {
           modules={[Pagination]}
           className="h-[300px] sm:h-[320px] md:h-[350px] lg:h-[400px]"
         >
-          {testimonialData.map((testimonial, i) => {
+          {loading ? (
+            <SwiperSlide>
+              <div className="relative bg-tertiary p-4 rounded-lg flexCenter flex-col group max-h-[350px]">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+                <p className="text-gray-20 mt-4">Loading testimonials...</p>
+              </div>
+            </SwiperSlide>
+          ) : testimonials.map((testimonial, i) => {
             const avatar = testimonial.name
               .split(" ")
               .slice(0, 2)
@@ -80,10 +99,10 @@ const Testimonials = () => {
               <SwiperSlide key={i}>
                 <div className="relative bg-tertiary p-4 rounded-lg flexCenter flex-col group max-h-[350px]">
                   {/* user info */}
-                  {testimonial.url ? (
+                  {testimonial.avatarUrl ? (
                     <div className="flex gap-4">
                       <Image
-                        src={testimonial.url}
+                        src={testimonial.avatarUrl}
                         width={77}
                         height={77}
                         alt="testimonialIMG"

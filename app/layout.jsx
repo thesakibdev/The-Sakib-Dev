@@ -1,16 +1,17 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import Header from "@/components/Header";
+import ClientLayout from "@/components/ClientLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Layout({ children }) {
   return (
-    <div className={inter.className}>
-      <Header/>
-      <NavBar/>
-      <main>{children}</main>
-    </div>
+    <html lang="en">
+      <body className={inter.className}>
+        <ClientLayout>
+          <main>{children}</main>
+        </ClientLayout>
+      </body>
+    </html>
   );
 }

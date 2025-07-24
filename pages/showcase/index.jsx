@@ -5,8 +5,6 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-// data
-import { showcase } from "@/app/constant/data";
 // link
 import Link from "next/link";
 
@@ -16,8 +14,30 @@ import Image from "next/image";
 //animation
 import fadeIn from "@/components/Variants";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { projectsAPI } from "../../utils/api";
 
 const Showcase = () => {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  const fetchProjects = async () => {
+    try {
+      const data = await projectsAPI.getFeatured();
+      if (data.success) {
+        setProjects(data.data);
+      }
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="padding-container max-container py-12 xl:py-32 flex flex-col md:flex-row  md:gap-8 lg:gap-20 xl:gap-28">
       {/* title */}
@@ -64,32 +84,39 @@ const Showcase = () => {
           modules={[Pagination]}
           className="sm:mt-16 "
         >
-          {showcase?.slides?.map((slide, i) => (
+          {loading ? (
+            <SwiperSlide>
+              <div className="flex flex-col items-center gap-y-4">
+                <div className="flexCenter">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+                  <p className="text-gray-20 ml-4">Loading projects...</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ) : projects.map((project, i) => (
             <SwiperSlide key={i}>
               <div className="flex flex-col items-center gap-y-4">
-                {slide?.images?.map((image, i) => (
-                  <div className="flexCenter" key={i}>
-                    <div className="relative overflow-hidden group rounded-lg cursor-pointer">
-                      <div className="w-full">
-                        <Image
-                          src={image.url}
-                          alt="working"
-                          height={150}
-                          width={350}
-                        />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-l from-[#19974e] to-[#fe0000] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      <div className="absolute top-[100%] left-1/2 -translate-x-1/2 group-hover:opacity-100 group-hover:top-[50%] opacity-0 transition-all duration-500 flex gap-4">
-                        <Link
-                          href={`/showcase/${image.id}`}
-                          className="bg-secondary text-white p-3 rounded-full hover:bg-white hover:text-secondary transition-all duration-300"
-                        >
-                          View Details
-                        </Link>
-                      </div>
+                <div className="flexCenter">
+                  <div className="relative overflow-hidden group rounded-lg cursor-pointer">
+                    <div className="w-full">
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.title}
+                        height={150}
+                        width={350}
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-l from-[#19974e] to-[#fe0000] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                    <div className="absolute top-[100%] left-1/2 -translate-x-1/2 group-hover:opacity-100 group-hover:top-[50%] opacity-0 transition-all duration-500 flex gap-4">
+                      <Link
+                        href={`/showcase/${project._id}`}
+                        className="bg-secondary text-white p-3 rounded-full hover:bg-white hover:text-secondary transition-all duration-300"
+                      >
+                        View Details
+                      </Link>
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
             </SwiperSlide>
           ))}

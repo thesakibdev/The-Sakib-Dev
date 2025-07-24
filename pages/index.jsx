@@ -60,6 +60,7 @@ const Home = () => {
           width={400}
           height={400}
           className="w-[277px] lg:w-[500px]  mx-auto relative"
+          priority
         />
         <motion.span
           className="bg-secondary h-60 w-60 lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px] absolute top-4 right-0 rounded-br-none rounded-full -z-10 lg:top-12 lg:right-10"
