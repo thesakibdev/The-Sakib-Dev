@@ -27,7 +27,7 @@ const Home = () => {
           A
           <span className="pl-2">
             <Typewriter
-              words={["Mern Stack Developer", "Passionate Programer"]}
+              words={["Mern Stack Developer", "Passionate Developer"]}
               loop={true}
               cursor
               cursorStyle={"_"}

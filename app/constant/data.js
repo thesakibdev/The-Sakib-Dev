@@ -107,20 +107,16 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Chief Technology Officer - The Islamics Center",
+        title: "Chief Technology Officer - Luminox Labs AI",
         year: "2025",
       },
       {
-        title: "Full Stack Developer ( Intern ) - Luminox Labs AI",
-        year: "2025",
+        title: "Mern Stack Developer - The Islamics Center",
+        year: "2024 - 2025",
       },
       {
         title: "Mern Stack Developer - Chemistrywala",
         year: "2025",
-      },
-      {
-        title: "FrontEnd Web Developer - Creative It Institute",
-        year: "2023 - 2024",
       },
       {
         title: "Freelancer - Fiver",
@@ -144,11 +140,11 @@ const aboutData = [
         year: "2023",
       },
       {
-        title: "JavaScript  - Creative It Institute",
+        title: "JavaScript  - Udemy",
         year: "2023",
       },
       {
-        title: "Html Css  - udamy",
+        title: "Html Css  - Udemy",
         year: "2022",
       },
     ],

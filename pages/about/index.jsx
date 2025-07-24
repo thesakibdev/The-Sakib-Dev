@@ -31,7 +31,7 @@ const About = () => {
             <div className="relative flex-1 px-4 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
               <h4 className="text-secondary font-extrabold text-2xl">
                 <CountUp start={100} end={150} duration={5} delay={1} />
-                K+
+                +
                 <p className="uppercase text-[13px] font-bold leading-4 pt-2">
                   Happy Client
                 </p>
@@ -39,7 +39,7 @@ const About = () => {
             </div>
             <div className="relative flex-1 px-4 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
               <h4 className="text-secondary font-extrabold text-2xl">
-                <CountUp start={80} end={100} duration={5} delay={1} />+
+                <CountUp start={2} end={10} duration={5} delay={1} />+
                 <p className="uppercase text-[13px] font-bold leading-4 pt-2">
                   Project done
                 </p>
@@ -47,8 +47,8 @@ const About = () => {
             </div>
             <div className="relative flex-1 px-4 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
               <h4 className="text-secondary font-extrabold text-2xl">
-                <CountUp start={50} end={80} duration={5} delay={1} />
-                K+
+                <CountUp start={2} end={10} duration={5} delay={1} />
+                +
                 <p className="uppercase text-[13px] font-bold leading-4 pt-2">
                   Client reviews
                 </p>
@@ -56,7 +56,7 @@ const About = () => {
             </div>
             <div className="relative flex-1 px-4 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
               <h4 className="text-secondary font-extrabold text-2xl">
-                <CountUp start={0} end={2} duration={5} delay={1} />+
+                <CountUp start={0} end={3} duration={5} delay={1} />+
                 <p className="uppercase text-[13px] font-bold leading-4 pt-2">
                   Year experience
                 </p>
