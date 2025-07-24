@@ -9,8 +9,6 @@ import "swiper/css/pagination";
 import { showcase } from "@/app/constant/data";
 // link
 import Link from "next/link";
-// icon
-import { FaExternalLinkAlt } from "react-icons/fa";
 
 // image from next image
 import Image from "next/image";
@@ -81,13 +79,14 @@ const Showcase = () => {
                         />
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-l from-[#19974e] to-[#fe0000] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      <Link
-                        href={image.link || "/"}
-                        target="_blank"
-                        className="absolute top-[100%] left-1/2 text-2xl -translate-x-1/2 group-hover:opacity-100 group-hover:top-[50%] opacity-0 transition-all duration-500"
-                      >
-                        <FaExternalLinkAlt />
-                      </Link>
+                      <div className="absolute top-[100%] left-1/2 -translate-x-1/2 group-hover:opacity-100 group-hover:top-[50%] opacity-0 transition-all duration-500 flex gap-4">
+                        <Link
+                          href={`/showcase/${image.id}`}
+                          className="bg-secondary text-white p-3 rounded-full hover:bg-white hover:text-secondary transition-all duration-300"
+                        >
+                          View Details
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 ))}
