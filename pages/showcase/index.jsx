@@ -32,15 +32,15 @@ const Showcase = () => {
       >
         <div className="pb-12 text-center uppercase">
           <h3 className="text-[30px] lg:text-[36px] font-extrabold relative leading-normal uppercase">
-            Work<span className="text-secondary">s</span>
+            My Work<span className="text-secondary">s</span>
             <span className="text-[45px] lg:text-[54px] font-extrabold text-white/5 absolute top-[50%] left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase">
-              My ShowCase
+              ShowCase
             </span>
           </h3>
           <p className="text-center max-w-md mx-auto text-gray-20 mt-12">
-            A glimpse of my recent projects — from innovative startups to
-            dynamic web platforms. Explore the work that reflects my passion for
-            coding, design, and functionality.
+            A GLIMPSE OF MY RECENT PROJECTS — FROM INNOVATIVE STARTUPS TO
+            DYNAMIC WEB PLATFORMS. EXPLORE THE WORK THAT REFLECTS MY PASSION FOR
+            CODING, DESIGN, AND FUNCTIONALITY.
           </p>
         </div>
       </motion.div>
@@ -57,37 +57,46 @@ const Showcase = () => {
           breakpoints={{
             640: {
               slidesPerView: 2,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
           }}
           pagination={{
             clickable: true,
           }}
           modules={[Pagination]}
-          className="sm:mt-16 "
+          className="sm:mt-16"
         >
-          {showcase?.slides?.map((slide, i) => (
-            <SwiperSlide key={i}>
-              <div className="flex flex-col items-center gap-y-4">
-                {slide?.images?.map((image, i) => (
-                  <div className="flexCenter" key={i}>
+          {showcase?.slides?.map((slide, slideIndex) => (
+            <SwiperSlide key={slideIndex}>
+              <div className="flex flex-col items-center gap-y-6">
+                {slide?.images?.map((image, imageIndex) => (
+                  <div className="flexCenter" key={imageIndex}>
                     <div className="relative overflow-hidden group rounded-lg cursor-pointer">
                       <div className="w-full">
                         <Image
                           src={image.url}
-                          alt="working"
-                          height={150}
+                          alt={image.title || "project"}
+                          height={200}
                           width={350}
+                          className="w-full h-auto"
                         />
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-l from-[#19974e] to-[#fe0000] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      <Link
-                        href={image.link || "/"}
-                        target="_blank"
-                        className="absolute top-[100%] left-1/2 text-2xl -translate-x-1/2 group-hover:opacity-100 group-hover:top-[50%] opacity-0 transition-all duration-500"
-                      >
-                        <FaExternalLinkAlt />
-                      </Link>
+                      
+                      {/* Gradient overlay on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 to-green-500/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                        <Link
+                          href={`/showcase/${image.id}`}
+                          className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                        >
+                          View Details
+                        </Link>
+                      </div>
+                      
+                      {/* Project info */}
+                      <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <h4 className="text-lg font-bold mb-1">{image.title}</h4>
+                        <p className="text-sm text-gray-300">{image.category}</p>
+                      </div>
                     </div>
                   </div>
                 ))}
