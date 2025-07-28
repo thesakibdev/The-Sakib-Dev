@@ -34,7 +34,7 @@ const ProjectDetails = () => {
       <div className="padding-container max-container py-12 xl:py-32 flexCenter min-h-screen">
         <div className="text-center">
           <h2 className="h2 mb-4">Project Not Found</h2>
-          <p className="mb-8">The project you're looking for doesn't exist.</p>
+          <p className="mb-8">The project you&apos;re looking for doesn&apos;t exist.</p>
           <Link href="/showcase" className="btn_dark_rounded px-6 py-3">
             Back to Showcase
           </Link>
@@ -271,7 +271,7 @@ const ProjectDetails = () => {
         <h3 className="h3 mb-4">Interested in Similar Projects?</h3>
         <p className="text-gray-20 mb-6 max-w-2xl mx-auto">
           I can help you create a similar project or customize it according to your specific needs. 
-          Let's discuss your requirements and bring your vision to life.
+          Let&apos;s discuss your requirements and bring your vision to life.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
