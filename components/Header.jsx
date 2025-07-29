@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="padding-container max-container flex gap-4 flexBetween py-4">
       <Link href={"/"} className="bold-20">
-        The Sakib <span className="regular-20 text-secondary">Dev</span>
+        Md Sakib <span className="regular-20 text-secondary">Hasan</span>
       </Link>
       <Link
         href={"https://www.fiverr.com/sellers/thesakibdev"}
